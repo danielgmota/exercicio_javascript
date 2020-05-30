@@ -1,0 +1,21 @@
+Necessitamos uma função produto que receba um array de números e retorne o produto: o resultado de multiplicar todos os elementos entre si.
+
+Por exemplo, produto([1, 4, 7]) deve retornar 28, que é 1 * 4 * 7.
+
+function produto(umArray) {
+    var produto = 0;
+    for (let x = 0; x < umArray.length; x++) {
+        if (x == 0) {
+            produto = umArray[x];
+        } else {
+            produto = produto * umArray[x];
+        }
+    }
+    return produto;
+}
+
+console.log(produto([1, 4, 7])); // deve retornar 28
+console.log(produto([1, 2, 7]));
+console.log(produto([10, 10]));
+console.log(produto([10]));
+console.log(produto([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
